@@ -129,3 +129,15 @@ a{
 .form-group{
     margin-bottom: 10px !important;
 }
+.textwhite{
+    color: white !important;
+}
+.nav{
+    margin-right: 10px !important;
+}
+a:hover{
+    color: black !important;
+}
+.active{
+    background-color: #a1887f !important;
+}
