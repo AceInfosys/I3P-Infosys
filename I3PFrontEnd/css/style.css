@@ -52,6 +52,39 @@ a{
     margin-left: 50px;
     width: 120px;
 }
+
+.modal-header{
+    background-color: #795548;
+    padding: 30px 30px !important;
+    text-align: center;
+}
+
+.modal-body{
+    color: grey;
+    padding: 40px 80px !important;
+}
+
+.btnlogin, .btnregister{
+    float: right;
+    text-align: right;
+    background-color: #795548;
+    color: white !important;
+    margin-top: -30px;
+}
+
+.modal-footer{
+    color: #795548;
+    padding: 15px 80px !important;
+    font-size: 10pt;
+}
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
 .footer{
     font-size: 9pt;
 }
@@ -63,4 +96,36 @@ a{
     margin-top: -16px;
     text-align: right;
     color: #795548;
+}
+.navbar{
+    background-color: #795548;
+}
+.logonav{
+    height: 40px;
+    margin-top: -10px;
+    margin-left: 15px;
+}
+.panel-reg{
+    width: 465px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panel-body{
+    padding: 20px 40px !important;
+}
+.panelhead{
+    font-size: 20pt;
+    margin-bottom: 5px;
+}
+
+.btnregister{
+    margin-top: 3px
+}
+
+.labelreg{
+    font-size: 9pt;
+}
+
+.form-group{
+    margin-bottom: 10px !important;
 }
