@@ -1,0 +1,66 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit !important;
+}
+
+.containerbody{
+    background-image: url(../img/frontspa.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100% !important;
+    background-color: white;
+    overflow: hidden;
+    color: white;
+}
+.logoimg{
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.textvisi{
+    font-size: 22pt;
+    text-align: center;
+    margin-bottom: 70px;   
+}
+
+.textinvite{
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.loginandregister{
+    text-align: center;
+    padding-bottom: 8.5%;
+}
+
+.btn-orange{
+    background-color: #ff5722;
+    font-size: 16pt !important;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 120px;
+}
+.footer{
+    font-size: 9pt;
+}
+.copyright{
+    text-align: center;
+}
+.registerpegawai{
+    margin-right: 30px;
+    margin-top: -16px;
+    text-align: right;
+    color: #795548;
+}
