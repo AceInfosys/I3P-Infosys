@@ -259,9 +259,12 @@ a:hover{
     color: #ff5722;
     margin-bottom: 10px;
 }
-.btnbukti{
+.btnbukti, .btnsimpan{
     background-color: #795548;
     color: white !important;
+}
+.btnsimpan{
+    float: right;
 }
 .databukti{
     padding-top:3px;
@@ -278,7 +281,7 @@ a:hover{
 .rate{
     width: 1.5em;
 }
-.pengumumanhead{
+.pengumumanhead, .presensihead{
     margin-top: 15px;
     margin-bottom: 5px;
     font-size: 10pt !important;
@@ -286,4 +289,19 @@ a:hover{
 .uploadcv{
     margin-top: 15px;
     margin-bottom: 10px;
+}
+.hadir{
+    width: 35px;
+    display: inline-block;
+}
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
 }
