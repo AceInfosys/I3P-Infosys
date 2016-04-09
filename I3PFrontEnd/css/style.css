@@ -113,7 +113,7 @@ a{
 .panel-body{
     padding: 20px 40px !important;
 }
-.panelhead{
+.panelhead, .headcenter{
     font-size: 20pt;
     margin-bottom: 5px;
 }
@@ -210,7 +210,7 @@ a:hover{
     font-size: 13pt;
     margin-bottom: 3px;
 }
-.datepemesanan{
+.datepemesanan, .datekomplain{
     font-size: 8pt;
     color: #8d6e63;
     vertical-align: bottom;
@@ -227,4 +227,27 @@ a:hover{
     display: block;
     margin-left: -55px;
     width: 35px;
+}
+.waitkomplain, .donekomplain{
+    font-size: 9pt;
+    vertical-align: bottom;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.waitkomplain{
+    color: #ff5722;
+}
+.donekomplain{
+    color: #4caf50;
+}
+.iconkomplain{
+    float: right;
+    width: 38px;
+}
+.detailkomplain{
+    margin-top: 20px;
+}
+.headcenter{
+    text-align: center;
 }
