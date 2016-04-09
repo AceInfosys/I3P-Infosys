@@ -210,7 +210,7 @@ a:hover{
     font-size: 13pt;
     margin-bottom: 3px;
 }
-.datepemesanan, .datekomplain{
+.datepemesanan, .datekomplain, .datereview{
     font-size: 8pt;
     color: #8d6e63;
     vertical-align: bottom;
@@ -245,9 +245,63 @@ a:hover{
     float: right;
     width: 38px;
 }
-.detailkomplain{
+.detailkomplain, .detailreview{
     margin-top: 20px;
 }
 .headcenter{
     text-align: center;
+}
+.dtlbukti{
+    margin-top: 20px;
+}
+.rmbrbukti{
+    font-size: 10pt;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+.btnbukti, .btnsimpan{
+    background-color: #795548;
+    color: white !important;
+}
+.btnsimpan{
+    float: right;
+}
+.databukti{
+    padding-top:3px;
+    border-top-style: solid;
+    border-top-color: lightgrey;
+    border-top-width: 1px;
+    margin-bottom: 20px;
+}
+.loginpegawai{
+    font-size: 9pt;
+    color: #ff5722;
+    margin-top:20px;
+}
+.rate{
+    width: 1.5em;
+}
+.pengumumanhead, .presensihead{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 10pt !important;
+}
+.uploadcv{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.hadir{
+    width: 35px;
+    display: inline-block;
+}
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
 }
