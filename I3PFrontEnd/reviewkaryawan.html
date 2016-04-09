@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I3P - Register</title>
+        <meta name="description" content="Using for Information System task">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="container-header">
+                    <a class="navbar-brand" href="index.html"><img class="logonav" src="img/logozen.png"></a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a class="textwhite" href="reviewkaryawan.html">Review</a></li>
+                    <li><a class="textwhite" href="#">Log Out</a></li>
+                </ul>
+            </div>
+        </nav> 
+        <div class="container">
+            <div class="headcenter">Ulasan dari Pelanggan</div>
+            <!--harusnya generate panel di sini, tergantung backendnya-->
+            <div class="panel panel-default panel-reg">
+                <div class="panel-body">
+                    <div class="namereview"><b>ErickC</b></div> <!-- ini harusnya nama orang yang komplain ke karyawannya. Diambil dari basis data-->
+                    <div class="descreview">Pijetannya enak, rileks banget. Pegel pegel jadi hilang.
+Makasih ya...</div> <!-- ini harusnya isi review user-->
+                    <div class="row detailreview">
+                        <div class="col-sm-7">
+                            <div class="datereview">Dibuat pada 31 Maret 2016 07:29 PM</div><!-- ini harusnya tanggal dilakukannya review-->
+                        </div>
+                        <div class="col-sm-5">
+                            <!-- di sini harusnya ngegenerate jumlah love yang ada dari user-->
+                            <img class="rate" src="img/favorite.png">
+                            <img class="rate" src="img/favorite.png">
+                            <img class="rate" src="img/favorite.png">
+                            <img class="rate" src="img/favorite.png">
+                            <img class="rate" src="img/favorite.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

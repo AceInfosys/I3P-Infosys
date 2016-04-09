@@ -210,7 +210,7 @@ a:hover{
     font-size: 13pt;
     margin-bottom: 3px;
 }
-.datepemesanan, .datekomplain{
+.datepemesanan, .datekomplain, .datereview{
     font-size: 8pt;
     color: #8d6e63;
     vertical-align: bottom;
@@ -245,7 +245,7 @@ a:hover{
     float: right;
     width: 38px;
 }
-.detailkomplain{
+.detailkomplain, .detailreview{
     margin-top: 20px;
 }
 .headcenter{
@@ -274,4 +274,7 @@ a:hover{
     font-size: 9pt;
     color: #ff5722;
     margin-top:20px;
+}
+.rate{
+    width: 1.5em;
 }
