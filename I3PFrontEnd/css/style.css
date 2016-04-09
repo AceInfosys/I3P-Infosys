@@ -278,3 +278,8 @@ a:hover{
 .rate{
     width: 1.5em;
 }
+.pengumumanhead{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 10pt !important;
+}
