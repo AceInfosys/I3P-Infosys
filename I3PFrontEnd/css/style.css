@@ -251,3 +251,22 @@ a:hover{
 .headcenter{
     text-align: center;
 }
+.dtlbukti{
+    margin-top: 20px;
+}
+.rmbrbukti{
+    font-size: 10pt;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+.btnbukti{
+    background-color: #795548;
+    color: white !important;
+}
+.databukti{
+    padding-top:3px;
+    border-top-style: solid;
+    border-top-color: lightgrey;
+    border-top-width: 1px;
+    margin-bottom: 20px;
+}
