@@ -26,7 +26,8 @@ CREATE TABLE `customer_users` (
 	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`user_id` INT (10) UNSIGNED NOT NULL,
 	PRIMARY KEY (`id`),
-	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`)
+	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
+	UNIQUE ('user_id')
 );
 
 -- Table structure for table `staff_users`
@@ -37,14 +38,14 @@ CREATE TABLE `staff_users` (
 	`created_at` TIMESTAMP DEFAULT 0 NOT NULL,
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	PRIMARY KEY (`id`),
-	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`)
+	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
+	UNIQUE ('user_id')
 );
 
 -- Table structure for table `employee_users`
 CREATE TABLE `employee_users` (
 	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`user_id` INT(10) UNSIGNED NOT NULL,
-	`full_name` TEXT NOT NULL,
 	`position` TEXT,
 	`birth_date` DATE NOT NULL,
 	`birth_place` TEXT NOT NULL,
@@ -54,7 +55,8 @@ CREATE TABLE `employee_users` (
 	`created_at` TIMESTAMP DEFAULT 0 NOT NULL,
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	PRIMARY KEY (`id`),
-	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`)
+	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
+	UNIQUE ('user_id')
 );
 
 -- Table structure for table `employee_presences`
@@ -72,6 +74,8 @@ CREATE TABLE `bookings` (
 	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`user_id` INT(10) UNSIGNED NOT NULL,
 	`id_enc` VARCHAR(255) NOT NULL,
+	`booking_datetime` DATETIME NOT NULL,
+	`booking_service` VARCHAR(255) NOT NULL,
 	`created_at` TIMESTAMP DEFAULT 0 NOT NULL,
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	PRIMARY KEY (`id`),
@@ -96,6 +100,7 @@ CREATE TABLE `complaint_comms` (
 	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`complaint_id` INT(10) UNSIGNED NOT NULL,
 	`user_id` INT(10) UNSIGNED NOT NULL,
+	`message` TEXT NOT NULL,
 	`created_at` TIMESTAMP DEFAULT 0 NOT NULL,
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	PRIMARY KEY (`id`),
