@@ -5,9 +5,10 @@
 			$this->load->database();
 		}
 
-		public function get_all_with_id($id) {
+		public function get_all_by_id($id) {
 			$this->db->select('id, username, email, full_name, tel_no, type');
 			$query = $this->db->get_where('users', array('id' => $id));
+			return $query->result();
 		}
 
 		public function insert_new_user($username, $email, $password, $full_name, $tel_no, $type) {
