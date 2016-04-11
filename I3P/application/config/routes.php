@@ -50,5 +50,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'welcome';
+
+$route['register'] = 'register';
+$route['login'] = 'login';
+
+/* For Customer Users */
+$route['users/customer/profile'] = 'customer/profile';
+$route['users/customer/booking'] = 'customer/booking';
+$route['users/customer/complaint'] = 'customer/complaint';
+$route['users/customer/ratereview'] = 'customer/ratereview';
+$route['users/customer'] = 'customer';
+$route['users/customer/(:any)'] = 'customer/index';
+
+/* For Employee Users */
+$route['users/employee/profile'] = 'employee/profile';
+$route['users/employee/presence'] = 'employee/presence';
+$route['users/employee/ratereviewinfo'] = 'employee/ratereviewinfo';
+$route['users/employee'] = 'employee';
+$route['users/employee/(:any)'] = 'employee';
+
+/* For Staff Users */
+$route['users/staff/profile'] = 'staff/profile';
+$route['users/staff/complaints'] = 'staff/complaints';
+$route['users/staff/ratereviewinfo'] = 'staff/ratereviewinfo';
+$route['users/staff'] = 'staff';
+$route['users/staff/(:any)'] = 'staff';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
