@@ -2,6 +2,7 @@
 
 SET time_zone = "+07:00";
 
+DROP DATABASE IF EXISTS `db_i3p_core`;
 CREATE DATABASE IF NOT EXISTS `db_i3p_core`;
 
 USE `db_i3p_core`;
@@ -27,7 +28,7 @@ CREATE TABLE `customer_users` (
 	`user_id` INT (10) UNSIGNED NOT NULL,
 	PRIMARY KEY (`id`),
 	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
-	UNIQUE ('user_id')
+	UNIQUE (`user_id`)
 );
 
 -- Table structure for table `staff_users`
@@ -39,7 +40,7 @@ CREATE TABLE `staff_users` (
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	PRIMARY KEY (`id`),
 	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
-	UNIQUE ('user_id')
+	UNIQUE (`user_id`)
 );
 
 -- Table structure for table `employee_users`
@@ -56,7 +57,7 @@ CREATE TABLE `employee_users` (
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	PRIMARY KEY (`id`),
 	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
-	UNIQUE ('user_id')
+	UNIQUE (`user_id`)
 );
 
 -- Table structure for table `employee_presences`
@@ -80,6 +81,19 @@ CREATE TABLE `bookings` (
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	PRIMARY KEY (`id`),
 	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`)
+);
+
+-- Table structure for table `booking_assignments`
+CREATE TABLE `booking_assignments` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`booking_id` INT(10) UNSIGNED NOT NULL,
+	`customer_user_id` INT(10) UNSIGNED NOT NULL,
+	`employee_user_id` INT(10) UNSIGNED NOT NULL,
+	`created_at` TIMESTAMP DEFAULT 0 NOT NULL,
+	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+	PRIMARY KEY (`id`),
+	FOREIGN KEY	 (`customer_user_id`) REFERENCES `customer_users`(`user_id`),
+	FOREIGN KEY (`employee_user_id`) REFERENCES `employee_users`(`user_id`)
 );
 
 -- Table structure for table `complaints`
@@ -112,14 +126,11 @@ CREATE TABLE `complaint_comms` (
 CREATE TABLE `rate_and_reviews` (
 	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`booking_id` INT(10) UNSIGNED NOT NULL,
-	`customer_user_id` INT(10) UNSIGNED NOT NULL,
-	`employee_user_id` INT(10) UNSIGNED NOT NULL,
 	`rating` INT(10),
 	`review` TEXT,
 	`created_at` TIMESTAMP DEFAULT 0 NOT NULL,
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	PRIMARY KEY (`id`),
 	FOREIGN KEY (`booking_id`) REFERENCES `bookings`(`id`),
-	FOREIGN KEY (`customer_user_id`) REFERENCES `customer_users`(`id`),
-	FOREIGN KEY (`employee_user_id`) REFERENCES `employee_users`(`id`)
+	UNIQUE (`booking_id`)
 );
