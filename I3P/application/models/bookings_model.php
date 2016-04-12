@@ -28,6 +28,7 @@
 			$this->db->insert('bookings', $insert_data);
 		}
 
+		// UPDATE BOOKING CURRENTLY DISABLED. Caution: customer users may abruptly change the booking.
 		public function update_booking($id, $new_booking_datetime, $new_booking_service) {
 			$insert_data = array(
 					'booking_datetime' => $new_booking_datetime,
