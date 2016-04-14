@@ -18,7 +18,8 @@
 					'password' => $password,
 					'full_name' => $full_name,
 					'tel_no' => $tel_no,
-					'type' => $type
+					'type' => $type,
+					'created_at' => date('Y-m-d H:i:s')
 				);
 			$this->db->insert('users', $insert_data);
 		}
