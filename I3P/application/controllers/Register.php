@@ -20,17 +20,17 @@
 			$this->form_validation->set_rules('password', 'Password', 'required|xss_clean');
 			$this->form_validation->set_rules('confirmation_password', 'Confirmation Password', 'required|matches[password]|xss_clean');
 			$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[users.email]|xss_clean');
-			$this->form_validation->set_rules('tel_no', 'Nomor Telepon', 'trim|required|xss_clean');
+			$this->form_validation->set_rules('tel_no', 'Nomor Telepon', 'trim|required|alpha_dash|xss_clean');
 
 			if ($this->form_validation->run() == FALSE) {
-				$this->load->view('template/header');
+				$this->load->view('template/header', array('title' => 'Register - I3P ZEN'));
 				$this->load->view('register');
 				$this->load->view('template/footer');
 			}
 			else {
 				$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
-				$this->users_model->insert_new_user($clean['username'], $clean['email'], $clean['password'], $clean['full_name'], $clean['tel_no'], $clean['type']);
-				echo 'Success';
+				$this->users_model->insert_new_user($clean['username'], $clean['email'], $this->bcrypt->hash_password($clean['password']), $clean['full_name'], $clean['tel_no'], $clean['type']);
+				echo '<script>alert("Registrasi berhasil."); window.location.href="../welcome";</script>';
 			}
 		}
 	}

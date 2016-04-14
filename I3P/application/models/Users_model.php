@@ -5,6 +5,24 @@
 			$this->load->database();
 		}
 
+		public function login_check($username, $password) {
+			$this->db->select('id, username, password');
+			$query = $this->db->get_where('users', array('username' => $username));
+			$query_result = $query->result();
+			if ($this->bcrypt->check_password($password, $query_result[0]->password)) {
+				$data = array(
+						'id' => $query_result[0]->id,
+						'status' => 'OK'
+					);
+			}
+			else {
+				$data = array(
+						'status' => 'ERROR'
+					);
+			}
+			return $data;
+		}
+
 		public function get_all_by_id($id) {
 			$this->db->select('id, username, email, full_name, tel_no, type');
 			$query = $this->db->get_where('users', array('id' => $id));
