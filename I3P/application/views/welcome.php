@@ -1,5 +1,5 @@
 <div class="containerbody">
-            <img class="logoimg" src="<?php echo base_url(); ?>/public/img/logozen.png"></img>
+            <img class="logoimg" src="<?php echo base_url(); ?>public/img/logozen.png"></img>
             <div class="textvisi">
                 <i>Think <b>Healty</b>, Think <b>Smart</b></i>
             </div>

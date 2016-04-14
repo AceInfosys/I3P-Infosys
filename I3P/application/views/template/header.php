@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <head>
         <title><?php echo $title; ?></title>
         <meta name="description" content="Using for Information System task">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>/public/css/style.css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>/public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/style.css">
     </head>
     <body>
