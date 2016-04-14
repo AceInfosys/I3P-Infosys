@@ -1,3 +1,10 @@
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="container-header">
+                    <a class="navbar-brand" href="index.html"><img class="logonav" src="<?php echo base_url(); ?>/public/img/logozen.png"></a>
+                </div>
+            </div>
+        </nav>
         <div class="container">
             <div class="panel panel-default panel-reg">
                 <div class="panel-body">
