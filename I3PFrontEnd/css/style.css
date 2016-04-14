@@ -9,6 +9,10 @@ a{
     color: inherit !important;
 }
 
+.nav{
+	margin: 0 !important;
+}
+
 .containerbody{
     background-image: url(../img/frontspa.jpg);
     background-position: center center;
@@ -304,4 +308,12 @@ label > input + img{ /* IMAGE STYLES */
 }
 label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   border:2px solid #f00;
+}
+.icon-calendar{background-position:-192px -120px}
+.form-booking{
+	margin-top: 30px;
+}
+
+.headbooking{
+	margin-top:10px;
 }

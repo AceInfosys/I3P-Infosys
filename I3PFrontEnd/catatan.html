@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I3P - Register</title>
+        <meta name="description" content="Using for Information System task">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="container-header">
+                    <a class="navbar-brand" href="index.html"><img class="logonav" src="img/logozen.png"></a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="textwhite" href="#">Komplain</a></li>
+                    <li class="active"><a class="textwhite" href="catatan.html">Catatan</a></li>
+                    <li><a class="textwhite" href="#">Data Karyawan</a></li>
+                    <li><a class="textwhite" href="#">Data Pelanggan</a></li>
+                    <li><a class="textwhite" href="#">Log Out</a></li>
+                </ul>
+            </div>
+        </nav> 
+        <div class="container">
+           <div class="panel panel-default panel-reg">
+                <div class="panel-body">
+                    <div class="panelhead">Presensi</div>
+                    <div class="presensihead">
+                        Kejujuran adalah kunci utama dalam segala kegiatan.<br>Manajer pasti mengetahui apakah kalian benar-benar hadir atau tidak.
+                    </div>                   
+                    <form role="form">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <label>
+                                        <input type="radio" name="hadir" value="hadir"/>
+                                        <img class="hadir" src="img/konfirmyes.png">
+                                    </label>
+                                </div>
+                                <div class="col-sm-10">
+                                    Hadir
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <label for="alasantidakhadir"> <input type="radio" name="tidakhadir" value="tidak hadir"/> <img class="hadir" src="img/tidakhadir.png"></label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input class="form-control tidakhadir" id="alasantidakhadir" type="text" placeholder="Tidak, karena...">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btnsimpan">Simpan  </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
