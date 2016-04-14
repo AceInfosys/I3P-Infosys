@@ -1,0 +1,307 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit !important;
+}
+
+.containerbody{
+    background-image: url(../img/frontspa.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100% !important;
+    background-color: white;
+    overflow: hidden;
+    color: white;
+}
+.logoimg{
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.textvisi{
+    font-size: 22pt;
+    text-align: center;
+    margin-bottom: 70px;   
+}
+
+.textinvite{
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.loginandregister{
+    text-align: center;
+    padding-bottom: 8.5%;
+}
+
+.btn-orange{
+    background-color: #ff5722;
+    font-size: 16pt !important;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 120px;
+}
+
+.modal-header{
+    background-color: #795548;
+    padding: 30px 30px !important;
+    text-align: center;
+}
+
+.modal-body{
+    color: grey;
+    padding: 40px 80px !important;
+}
+
+.btnlogin, .btnregister{
+    float: right;
+    text-align: right;
+    background-color: #795548;
+    color: white !important;
+    margin-top: -30px;
+}
+
+.modal-footer{
+    color: #795548;
+    padding: 15px 80px !important;
+    font-size: 10pt;
+}
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.footer{
+    font-size: 9pt;
+}
+.copyright{
+    text-align: center;
+}
+.registerpegawai{
+    margin-right: 30px;
+    margin-top: -16px;
+    text-align: right;
+    color: #795548;
+}
+.navbar{
+    background-color: #795548;
+}
+.logonav{
+    height: 40px;
+    margin-top: -10px;
+    margin-left: 15px;
+}
+.panel-reg{
+    width: 465px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panel-body{
+    padding: 20px 40px !important;
+}
+.panelhead, .headcenter{
+    font-size: 20pt;
+    margin-bottom: 5px;
+}
+
+.btnregister{
+    margin-top: 3px
+}
+
+.labelreg{
+    font-size: 9pt;
+}
+
+.form-group{
+    margin-bottom: 10px !important;
+}
+.textwhite{
+    color: white !important;
+}
+.nav{
+    margin-right: 10px !important;
+}
+a:hover{
+    color: black !important;
+}
+.active{
+    background-color: #a1887f !important;
+}
+.descques{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.descrvw{
+    height: 150px !important;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+.loverating:not(old){
+    display:  inline-block;
+    width: 7.5em;
+    height: 1.5em;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+.loverating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
+}
+.loverating:not(old) > label{
+  display         : block;
+  float           : right;
+  position        : relative;
+  background      : url('../img/favoriteoff.png');
+  background-size : contain;
+}
+.loverating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background      : url('../img/favorite.png');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+}
+.loverating:not(old) > label:hover:before,
+.loverating:not(old) > label:hover ~ label:before,
+.loverating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
+}
+.rvwbtn{
+    float: right;
+}
+.btnkirim{
+    text-align: right;
+    background-color: #795548;
+    color: white !important;
+}
+.btnbatal{
+    background-color: transparent;
+    margin-right: 20px;
+}
+.konfpemesanan{
+    float: right;
+    color: #8d6e63;
+    text-align: center;
+}
+.konfirmno, .konfirmyes{
+    text-align: right;
+    width: 38px;
+    margin-right: 3px;
+}
+.ntherapy{
+    font-size: 13pt;
+    margin-bottom: 3px;
+}
+.datepemesanan, .datekomplain, .datereview{
+    font-size: 8pt;
+    color: #8d6e63;
+    vertical-align: bottom;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.statpemesanan{
+    font-size: 9pt;
+    color: #ff5722;
+}
+.sudahpesan, .batalpesan{
+    margin-top: -35px;
+    display: block;
+    margin-left: -55px;
+    width: 35px;
+}
+.waitkomplain, .donekomplain{
+    font-size: 9pt;
+    vertical-align: bottom;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.waitkomplain{
+    color: #ff5722;
+}
+.donekomplain{
+    color: #4caf50;
+}
+.iconkomplain{
+    float: right;
+    width: 38px;
+}
+.detailkomplain, .detailreview{
+    margin-top: 20px;
+}
+.headcenter{
+    text-align: center;
+}
+.dtlbukti{
+    margin-top: 20px;
+}
+.rmbrbukti{
+    font-size: 10pt;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+.btnbukti, .btnsimpan{
+    background-color: #795548;
+    color: white !important;
+}
+.btnsimpan{
+    float: right;
+}
+.databukti{
+    padding-top:3px;
+    border-top-style: solid;
+    border-top-color: lightgrey;
+    border-top-width: 1px;
+    margin-bottom: 20px;
+}
+.loginpegawai{
+    font-size: 9pt;
+    color: #ff5722;
+    margin-top:20px;
+}
+.rate{
+    width: 1.5em;
+}
+.pengumumanhead, .presensihead{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 10pt !important;
+}
+.uploadcv{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.hadir{
+    width: 35px;
+    display: inline-block;
+}
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}
