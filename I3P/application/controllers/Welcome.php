@@ -30,19 +30,4 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome');
 		$this->load->view('template/footer');
 	}
-
-	public function login() {
-		$this->form_validation->set_rules('username', 'Username', 'required|xss_clean');
-		$this->form_validation->set_rules('password', 'Password', 'required|xss_clean');
-		$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
-		$result = $this->users_model->login_check($clean['username'], $clean['password']);
-		if ($result['status'] == 'OK') {
-			echo 'Login successful';
-		}
-		else {
-			$this->load->view('template/header', array('title' => 'I3P ZEN'));
-			$this->load->view('welcome');
-			$this->load->view('template/footer');
-		}
-	}
 }

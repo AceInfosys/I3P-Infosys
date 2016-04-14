@@ -24,7 +24,7 @@
                         <div class="modal-body">
                             <!-- <form role="form"> -->
                             <?php
-                                echo form_open('welcome/login');
+                                echo form_open('user/login');
                             ?>
                                 <div class="form-group">
                                   <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
