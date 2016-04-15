@@ -22,6 +22,7 @@ class Welcome extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('users_model');
+		// TO DO: Create filter here to redirect the logged in user based on their types.
 	}
 
 	public function index()

@@ -23,7 +23,8 @@
 			$insert_data = array(
 					'user_id' => $user_id,
 					'booking_datetime' => $booking_datetime,
-					'booking_service' => $booking_service // PLUS ID_ENC!
+					'booking_service' => $booking_service,
+					'created_at' => date('Y-m-d H:i:s') // PLUS ID_ENC!
 				);
 			$this->db->insert('bookings', $insert_data);
 		}

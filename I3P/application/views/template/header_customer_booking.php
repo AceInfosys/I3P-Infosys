@@ -5,18 +5,23 @@
         <meta name="description" content="Using for Information System task">
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/style.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/bootstrap-datetimepicker.min.css">
+        <link href="<?php echo base_url(); ?>public/css/bootstrap-combined.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css"> -->
+
         <script src="<?php echo base_url(); ?>public/js/jquery.min.js"></script>
         <script src="<?php echo base_url(); ?>public/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url(); ?>public/js/bootstrap-datetimepicker.min.js"></script>
     </head>
     <body>
-        <nav class="navbar">
+		<nav class="navbar">
             <div class="container-fluid">
                 <div class="container-header">
                     <a class="navbar-brand" href="index.html"><img class="logonav" src="<?php echo base_url(); ?>public/img/logozen.png"></a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                        <!-- <a class="textwhite" href="#">Booking</a> -->
+                        <!-- <a class="textwhite" href="booking.html">Booking</a> -->
                         <?php
                             $attribute = array(
                                     'class' => 'textwhite'
@@ -35,4 +40,4 @@
                     </li>
                 </ul>
             </div>
-        </nav> 
+        </nav>
