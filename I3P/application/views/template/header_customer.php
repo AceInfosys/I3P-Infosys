@@ -7,8 +7,11 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/bootstrap-datetimepicker.min.css">
         <link href="<?php echo base_url(); ?>public/css/bootstrap-combined.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" media="screen"
-        href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css"> -->
+
+        <script src="<?php echo base_url(); ?>public/js/jquery.min.js"></script>
+        <script src="<?php echo base_url(); ?>public/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url(); ?>public/js/bootstrap-datetimepicker.min.js"></script>
     </head>
     <body>
 		<nav class="navbar">
