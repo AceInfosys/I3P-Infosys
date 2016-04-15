@@ -72,7 +72,15 @@
 		}
 
 		public function ratereview() {
-			echo 'Customer Rate and Review Test';
+			// echo 'Customer Rate and Review Test';
+			$this->load->view('template/header_customer');
+			$this->load->view('reviewuser');
+			$this->load->view('template/footer_customer');
+		}
+
+		public function new_review() {
+			$this->load->model('Rate_and_reviews_model');
+			// $this->complaints_model->insert_new_rate_and_review( ,$this->input->post('rating'),$this->input->post('review'));
 		}
 	}
 ?>
