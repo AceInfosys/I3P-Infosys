@@ -23,7 +23,8 @@
 			$insert_data = array(
 					'user_id' => $user_id,
 					'message' => $message,
-					'status' => 'enquired'
+					'status' => 'enquired',
+					'created_at' => date('Y-m-d H:i:s')
 				);
 			$this->db->insert('complaints', $insert_data);
 		}

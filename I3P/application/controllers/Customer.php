@@ -8,6 +8,7 @@
 			$this->load->model('users_model');
 			$this->load->model('customer_users_model');
 			$this->load->model('bookings_model');
+			$this->load->model('complaints_model');
 		}
 
 		public function index() {
@@ -56,7 +57,18 @@
 		}
 
 		public function complaint() {
-			echo 'Customer Complaint Test';
+			// echo 'Customer Complaint Test';
+			$this->load->view('template/header_customer');
+			$this->load->view('complaint');
+			$this->load->view('template/footer_customer');
+		}
+
+		public function new_complaint() {
+			$this->form_validation->set_rules('message', 'Message', 'required|xss_clean');
+			$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
+			$this->complaints_model->insert_new_complaint($this->session->userdata('logged_in')['id'], $clean['message']);
+			// redirect('customer/booking');
+			echo '<script>alert("Keluhan berhasil disimpan."); window.location.href="'.base_url().'index.php/customer/booking";</script>';
 		}
 
 		public function ratereview() {

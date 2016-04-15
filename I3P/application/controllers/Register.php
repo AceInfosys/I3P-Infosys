@@ -30,7 +30,7 @@
 			else {
 				$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
 				$this->users_model->insert_new_user($clean['username'], $clean['email'], $this->bcrypt->hash_password($clean['password']), $clean['full_name'], $clean['tel_no'], $clean['type']);
-				echo '<script>alert("Registrasi berhasil."); window.location.href="../welcome";</script>';
+				echo '<script>alert("Registrasi berhasil."); window.location.href="'.base_url().'";</script>';
 			}
 		}
 	}

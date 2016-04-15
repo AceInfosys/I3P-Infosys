@@ -30,7 +30,15 @@
                         ?>
                     </li>
                     <li><a class="textwhite" href="reviewuser.html">Review</a></li>
-                    <li><a class="textwhite" href="komplainuser.html">Komplain</a></li>
+                    <li>
+                        <!-- <a class="textwhite" href="komplainuser.html">Komplain</a> -->
+                        <?php
+                            $attribute = array(
+                                    'class' => 'textwhite'
+                                );
+                            echo anchor('customer/complaint', 'Keluhan', $attribute);
+                        ?>
+                    </li>
                     <li class="dropdown"><a class="dropdown-toggle textwhite" data-toggle="dropdown" href="#">Username <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="pemesanansaya.html">Pemesanan Saya</a></li>
