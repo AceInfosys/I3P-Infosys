@@ -3,9 +3,9 @@
                 <div class="panel-body">
                     <div class="panelhead">Ulasan oleh UserName</div> <!-- username harus diganti dengan user saat ini-->
                     <div class="descques">Bagaimana pendapat anda tentang pelayanan kami?</div>
-                    <form role="form" >
+                    <form role="form">
                         <div class="form-group">
-                            <textarea name="review" type="text" class="form-control descrvw" placeholder="Deskripsikan seluruh pendapat anda tentang pelayanan yang diberikan oleh therapist kami"></textarea>
+                            <textarea type="text" class="form-control descrvw" placeholder="Deskripsikan seluruh pendapat anda tentang pelayanan yang diberikan oleh therapist kami"></textarea>
                         </div>
                         <div class="form-group">
                             <span class="loverating">
@@ -28,4 +28,7 @@
                     </form>
                 </div>
             </div>
-       
+        </div>
+        <script type="text/javascript">
+            document.getElementById('li_rate_review').classList.add("active");
+        </script>

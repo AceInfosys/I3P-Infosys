@@ -44,3 +44,6 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            document.getElementById('li_all_bookings').classList.add("active");
+        </script>

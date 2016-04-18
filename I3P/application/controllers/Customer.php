@@ -81,7 +81,7 @@
 		public function rate_review() {
 			// echo 'Customer Rate and Review Test';
 			$this->load->view('template/header_customer');
-			$this->load->view('reviewuser');
+			$this->load->view('rate_review');
 			$this->load->view('template/footer_customer');
 		}
 
