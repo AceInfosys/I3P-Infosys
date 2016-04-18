@@ -12,7 +12,7 @@
 		}
 
 		public function index() {
-			echo 'Customer Index Test';
+			redirect('customer/booking');
 		}
 
 		public function profile() {
@@ -71,14 +71,14 @@
 			echo '<script>alert("Keluhan berhasil disimpan."); window.location.href="'.base_url().'index.php/customer/booking";</script>';
 		}
 
-		public function ratereview() {
+		public function rate_review() {
 			// echo 'Customer Rate and Review Test';
 			$this->load->view('template/header_customer');
 			$this->load->view('reviewuser');
 			$this->load->view('template/footer_customer');
 		}
 
-		public function new_review() {
+		public function new_rate_review() {
 			$this->load->model('Rate_and_reviews_model');
 			// $this->complaints_model->insert_new_rate_and_review( ,$this->input->post('rating'),$this->input->post('review'));
 		}

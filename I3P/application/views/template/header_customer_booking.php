@@ -29,7 +29,12 @@
                             echo anchor('customer/booking', 'Booking', $attribute);
                         ?>
                     </li>
-                    <li><a class="textwhite" href="reviewuser.html">Review</a></li>
+                    <li>
+                        <!-- <a class="textwhite" href="reviewuser.html">Review</a> -->
+                        <?php
+                            echo anchor('customer/rate_review', 'Rate and Review', array('class' => 'textwhite'));
+                        ?>
+                    </li>
                     <li>
                         <!-- <a class="textwhite" href="komplainuser.html">Komplain</a> -->
                         <?php
