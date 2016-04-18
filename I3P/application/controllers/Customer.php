@@ -12,7 +12,7 @@
 		}
 
 		public function index() {
-			redirect('customer/booking');
+			redirect('customer/all_bookings');
 		}
 
 		public function profile() {
@@ -20,6 +20,13 @@
 			// echo $this->session->userdata('logged_in')['id'];
 			$this->load->view('template/header_customer');
 			$this->load->view('booking');
+			$this->load->view('template/footer_customer');
+		}
+
+		public function all_bookings() {
+			// echo 'All Booking Test';
+			$this->load->view('template/header_customer');
+			$this->load->view('all_bookings');
 			$this->load->view('template/footer_customer');
 		}
 
@@ -79,8 +86,11 @@
 		}
 
 		public function new_rate_review() {
-			$this->load->model('Rate_and_reviews_model');
+			$this->load->model('rate_and_reviews_model');
 			// $this->complaints_model->insert_new_rate_and_review( ,$this->input->post('rating'),$this->input->post('review'));
+			$this->form_validation->set_rules('review', 'Review', 'required|xss_clean');
+			$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
+			$this->rate_and_reviews_model->insert_new_rate_and_review($clean['booking_id'], $clean['rating'], $clean['review']);
 		}
 	}
 ?>

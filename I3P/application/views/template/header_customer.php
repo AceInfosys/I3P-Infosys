@@ -7,7 +7,7 @@
                     echo $title;
                 }
                 else {
-                    echo 'I3p';
+                    echo 'I3P';
                 }
             ?>
         </title>
@@ -25,6 +25,15 @@
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
+                        <!-- <a class="textwhite" href="#">Booking</a> -->
+                        <?php
+                            $attribute = array(
+                                    'class' => 'textwhite'
+                                );
+                            echo anchor('customer/all_bookings', 'Semua Booking', $attribute);
+                        ?>
+                    </li>
+                    <li>
                         <!-- <a class="textwhite" href="#">Booking</a> -->
                         <?php
                             $attribute = array(
@@ -50,9 +59,12 @@
                     </li>
                     <li class="dropdown"><a class="dropdown-toggle textwhite" data-toggle="dropdown" href="#">Username <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="pemesanansaya.html">Pemesanan Saya</a></li>
-                            <li><a href="komplainsaya.html">Komplain Saya</a></li>
-                            <li><a href="#">Log Out</a></li>
+                            <li><a href="komplainsaya.html">Profil Saya</a></li>
+                            <li>
+                                <?php
+                                    echo anchor('user/logout', 'Keluar');
+                                ?>
+                            </li>
                         </ul>
                     </li>
                 </ul>

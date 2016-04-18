@@ -20,6 +20,15 @@
                     <a class="navbar-brand" href="index.html"><img class="logonav" src="<?php echo base_url(); ?>public/img/logozen.png"></a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <!-- <a class="textwhite" href="#">Booking</a> -->
+                        <?php
+                            $attribute = array(
+                                    'class' => 'textwhite'
+                                );
+                            echo anchor('customer/all_bookings', 'Semua Booking', $attribute);
+                        ?>
+                    </li>
                     <li class="active">
                         <!-- <a class="textwhite" href="booking.html">Booking</a> -->
                         <?php
