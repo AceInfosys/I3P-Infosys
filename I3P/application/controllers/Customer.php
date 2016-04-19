@@ -86,8 +86,11 @@
 
 		public function all_complaints() {
 			// echo 'All Complaints Test';
+			$complaints = $this->complaints_model->get_complaints_by_user_id($this->session->userdata('logged_in')['id']);
+			$data = array('data' => $complaints);
+
 			$this->load->view('template/header_customer');
-			$this->load->view('customer/all_complaints');
+			$this->load->view('customer/all_complaints', $data);
 			$this->load->view('template/footer_customer');
 		}
 
