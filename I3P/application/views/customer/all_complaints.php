@@ -1,5 +1,5 @@
         <div class="container">
-            <div class="headcenter">Komplain Saya</div>
+            <div class="headcenter">Keluhan Saya</div>
             <!--harusnya generate panel di sini, tergantung backendnya-->
             <?php
                 foreach ($data as $complaint) {
@@ -39,7 +39,6 @@
                     }
                 }
             ?>
-
             <!-- TEMPLATE -->
             <!-- tampilan untuk komplain diproses-->
             <!-- <div class="panel panel-default panel-reg">
@@ -58,7 +57,7 @@
             <!-- ini harusnya kalau komplain udah selesai diproses-->
             <!-- <div class="panel panel-default panel-reg">
                 <div class="panel-body">
-                    <div class="desckomplain">Terdapat kerusakan pada AC di ruang 5 SPA wanita. Jadinya kurang nyaman dan gampang panas selama 1,5 jam. Tolong segera dibaikin dong.</div -->> <!-- ini harusnya isi komplain user-->
+                    <div class="desckomplain">Terdapat kerusakan pada AC di ruang 5 SPA wanita. Jadinya kurang nyaman dan gampang panas selama 1,5 jam. Tolong segera dibaikin dong.</div --> <!-- ini harusnya isi komplain user-->
                     <!-- <div class="row detailkomplain">
                     <div class="col-sm-10">
                         <div class="donekomplain">Komplain ini sudah ditangani</div>

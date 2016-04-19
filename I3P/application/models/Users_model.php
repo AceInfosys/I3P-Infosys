@@ -9,11 +9,19 @@
 			$this->db->select('id, username, password');
 			$query = $this->db->get_where('users', array('username' => $username));
 			$query_result = $query->result();
-			if ($this->bcrypt->check_password($password, $query_result[0]->password)) {
-				$data = array(
-						'id' => $query_result[0]->id,
-						'status' => 'OK'
-					);
+
+			if (isset($query_result[0])) {
+				if ($this->bcrypt->check_password($password, $query_result[0]->password)) {
+					$data = array(
+							'id' => $query_result[0]->id,
+							'status' => 'OK'
+						);
+				}
+				else {
+					$data = array(
+							'status' => 'ERROR'
+						);
+				}
 			}
 			else {
 				$data = array(

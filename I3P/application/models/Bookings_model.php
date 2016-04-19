@@ -21,7 +21,7 @@
 			$query = $this->db->get_where('bookings', array(
 					'user_id' => $user_id
 				));
-			return $query->result;
+			return $query->result();
 		}
 
 		public function insert_new_booking($user_id, $booking_datetime, $booking_service) {
@@ -29,9 +29,26 @@
 					'user_id' => $user_id,
 					'booking_datetime' => $booking_datetime,
 					'booking_service' => $booking_service,
-					'created_at' => date('Y-m-d H:i:s') // PLUS ID_ENC!
+					'created_at' => date('Y-m-d H:i:s'),
+					'status' => 'NOT CONFIRMED' // PLUS ID_ENC!
 				);
 			$this->db->insert('bookings', $insert_data);
+		}
+
+		public function confirm_booking($booking_id) {
+			$insert_data = array(
+					'status' => 'CONFIRMED'
+				);
+			$this->db->where('id', $booking_id);
+			$this->db->update('bookings', $insert_data);
+		}
+
+		public function cancel_booking($booking_id) {
+			$insert_data = array(
+					'status' => 'CANCELLED'
+				);
+			$this->db->where('id', $booking_id);
+			$this->db->update('bookings', $insert_data);
 		}
 
 		// UPDATE BOOKING CURRENTLY DISABLED. Caution: customer users may abruptly change the booking.

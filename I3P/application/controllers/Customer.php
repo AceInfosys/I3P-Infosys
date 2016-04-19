@@ -27,7 +27,7 @@
 		public function all_bookings() {
 			// echo 'All Booking Test';
 
-			$bookings = $this->bookings_model->get_all_bookings();
+			$bookings = $this->bookings_model->get_bookings_by_user_id($this->session->userdata('logged_in')['id']);
 
 			$data = array("data" => $bookings);
 
@@ -76,12 +76,26 @@
 			$this->load->view('template/footer_customer');
 		}
 
+		public function confirm_booking($booking_id) {
+			if ($booking_id !== null) {
+				$this->bookings_model->confirm_booking($booking_id);
+			}
+			redirect('customer/all_bookings');
+		}
+
+		public function cancel_booking($booking_id) {
+			if ($booking_id !== null) {
+				$this->bookings_model->cancel_booking($booking_id);
+			}
+			redirect('customer/all_bookings');
+		}
+
 		public function new_complaint() {
 			$this->form_validation->set_rules('message', 'Message', 'required|xss_clean');
 			$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
 			$this->complaints_model->insert_new_complaint($this->session->userdata('logged_in')['id'], $clean['message']);
 			// redirect('customer/booking');
-			echo '<script>alert("Keluhan berhasil disimpan."); window.location.href="'.base_url().'index.php/customer/booking";</script>';
+			echo '<script>alert("Keluhan berhasil disimpan."); window.location.href="'.base_url().'index.php/customer/all_complaints";</script>';
 		}
 
 		public function all_complaints() {

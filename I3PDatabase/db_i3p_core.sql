@@ -77,6 +77,7 @@ CREATE TABLE `bookings` (
 	`id_enc` VARCHAR(255) NOT NULL,
 	`booking_datetime` DATETIME NOT NULL,
 	`booking_service` VARCHAR(255) NOT NULL,
+	`status` VARCHAR(255),
 	`created_at` TIMESTAMP DEFAULT 0 NOT NULL,
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	PRIMARY KEY (`id`),
