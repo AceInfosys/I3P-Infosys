@@ -25,8 +25,13 @@
 
 		public function all_bookings() {
 			// echo 'All Booking Test';
+
+			$bookings = $this->bookings_model->get_all_bookings();
+
+			$data = array("data" => $bookings);
+
 			$this->load->view('template/header_customer');
-			$this->load->view('customer/all_bookings');
+			$this->load->view('customer/all_bookings', $data);
 			$this->load->view('template/footer_customer');
 		}
 

@@ -21,7 +21,7 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="container-header">
-                    <a class="navbar-brand" href="index.html"><img class="logonav" src="<?php echo base_url(); ?>public/img/logozen.png"></a>
+                    <a class="navbar-brand" href="<?php echo site_url('customer/profile');?>"><img class="logonav" src="<?php echo base_url(); ?>public/img/logozen.png"></a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <!-- <li id="li_all_bookings">
