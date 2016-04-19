@@ -1,5 +1,5 @@
         <div class="container">
-            <div class="headcenter">My Bookings</div>
+            <div class="headcenter">Pemesanan Saya</div>
             <!--harusnya generate panel di sini, tergantung backendnya-->
             <!-- tampilan untuk minta konfirmasi-->
 
@@ -8,7 +8,7 @@
                     <div class="panel-body">
                         <div class="ntherapy"><b><?php echo $booking->booking_service; ?></b></div> <!-- ini harusnya nama therapy yang diisi oleh user-->
                         <div class="desctherapy">Booking untuk <b><?php echo $booking->booking_datetime; ?></b><br> <!-- ini harusnya tanggal booking dia--> 
-                        <b>5</b> orang<br> <!-- ini harusnya jumlah orang yang booking-->
+                        <!-- <b>5</b> orang<br>  ini harusnya jumlah orang yang booking -->
                         Rp<b>450.000,-</b> <!-- ini harusnya jumlah total uang yang harus dibayar pelanggan-->
                         </div>
                         <div class="konfpemesanan">

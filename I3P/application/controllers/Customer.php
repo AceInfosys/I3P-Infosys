@@ -18,9 +18,10 @@
 		public function profile() {
 			// echo 'Customer Profile Test';
 			// echo $this->session->userdata('logged_in')['id'];
-			$this->load->view('template/header_customer');
-			$this->load->view('customer/booking');
-			$this->load->view('template/footer_customer');
+			// $this->load->view('template/header_customer');
+			// $this->load->view('customer/booking');
+			// $this->load->view('template/footer_customer');
+			redirect('customer/index');
 		}
 
 		public function all_bookings() {

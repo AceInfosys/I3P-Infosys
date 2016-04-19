@@ -104,7 +104,7 @@
                         </ul>
                     </li>
 
-                    <li class="dropdown"><a class="dropdown-toggle textwhite" data-toggle="dropdown" href="#">Username <span class="caret"></span></a>
+                    <li class="dropdown"><a class="dropdown-toggle textwhite" data-toggle="dropdown" href="#"><?php echo $this->session->userdata('logged_in')['username']; ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="komplainsaya.html">Profil Saya</a></li>
                             <li>

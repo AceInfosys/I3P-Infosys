@@ -1,7 +1,7 @@
         <div class="container">
             <div class="panel panel-default panel-reg">
                 <div class="panel-body">
-                    <div class="panelhead headbooking">Booking Baru</div>
+                    <div class="panelhead headbooking">Pemesanan Baru</div>
                     <!-- <form role="form" class="form-booking"> -->
                     <?php
                     	echo form_open('customer/new_booking');

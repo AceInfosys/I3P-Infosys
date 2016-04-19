@@ -1,7 +1,7 @@
         <div class="container">
             <div class="panel panel-default panel-reg">
                 <div class="panel-body">
-                    <div class="panelhead">Ulasan oleh UserName</div> <!-- username harus diganti dengan user saat ini-->
+                    <div class="panelhead">Ulasan dan Tanggapan Saya</div> <!-- username harus diganti dengan user saat ini-->
                     <div class="descques">Bagaimana pendapat anda tentang pelayanan kami?</div>
                     <form role="form">
                         <div class="form-group">
