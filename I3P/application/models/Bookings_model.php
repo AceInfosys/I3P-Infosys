@@ -5,6 +5,11 @@
 			$this->load->database();
 		}
 
+		public function get_all_bookings() {
+			$query = $this->db->get('bookings');
+			return $query->result();
+		}
+
 		public function get_booking_by_id($id) {
 			$query = $this->db->get_where('bookings', array(
 					'id' => $id
