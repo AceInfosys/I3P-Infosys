@@ -48,15 +48,33 @@
                             echo anchor('customer/rate_review', 'Rate and Review', array('class' => 'textwhite'));
                         ?>
                     </li>
-                    <li id="li_complaint">
-                        <!-- <a class="textwhite" href="komplainuser.html">Komplain</a> -->
+
+                    <!-- <li id="li_complaint">
+                        <a class="textwhite" href="komplainuser.html">Komplain</a>
                         <?php
                             $attribute = array(
                                     'class' => 'textwhite'
                                 );
                             echo anchor('customer/complaint', 'Keluhan', $attribute);
                         ?>
+                    </li> -->
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle textwhite" data-toggle="dropdown" href="#">Keluhan <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <?php
+                                    echo anchor('customer/all_complaints', 'Keluhan Saya');
+                                ?>
+                            </li>
+                            <li>
+                                <?php
+                                    echo anchor('customer/complaint', 'Buat Keluhan Baru');
+                                ?>
+                            </li>
+                        </ul>
                     </li>
+
                     <li class="dropdown"><a class="dropdown-toggle textwhite" data-toggle="dropdown" href="#">Username <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="komplainsaya.html">Profil Saya</a></li>

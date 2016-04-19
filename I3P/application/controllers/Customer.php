@@ -78,6 +78,13 @@
 			echo '<script>alert("Keluhan berhasil disimpan."); window.location.href="'.base_url().'index.php/customer/booking";</script>';
 		}
 
+		public function all_complaints() {
+			// echo 'All Complaints Test';
+			$this->load->view('template/header_customer');
+			$this->load->view('all_complaints');
+			$this->load->view('template/footer_customer');
+		}
+
 		public function rate_review() {
 			// echo 'Customer Rate and Review Test';
 			$this->load->view('template/header_customer');
