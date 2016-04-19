@@ -19,21 +19,21 @@
 			// echo 'Customer Profile Test';
 			// echo $this->session->userdata('logged_in')['id'];
 			$this->load->view('template/header_customer');
-			$this->load->view('booking');
+			$this->load->view('customer/booking');
 			$this->load->view('template/footer_customer');
 		}
 
 		public function all_bookings() {
 			// echo 'All Booking Test';
 			$this->load->view('template/header_customer');
-			$this->load->view('all_bookings');
+			$this->load->view('customer/all_bookings');
 			$this->load->view('template/footer_customer');
 		}
 
 		public function booking() {
 			// echo 'Customer Booking Test';
 			$this->load->view('template/header_customer_booking');
-			$this->load->view('booking');
+			$this->load->view('customer/booking');
 			$this->load->view('template/footer_customer_booking');
 		}
 
@@ -47,7 +47,7 @@
 					'full_name' => $user_info[0]->full_name
 				);
 			$this->load->view('template/header_customer');
-			$this->load->view('booking_receipt', $data);
+			$this->load->view('customer/booking_receipt', $data);
 			$this->load->view('template/footer_customer');
 		}
 
@@ -66,7 +66,7 @@
 		public function complaint() {
 			// echo 'Customer Complaint Test';
 			$this->load->view('template/header_customer');
-			$this->load->view('complaint');
+			$this->load->view('customer/complaint');
 			$this->load->view('template/footer_customer');
 		}
 
@@ -81,14 +81,14 @@
 		public function all_complaints() {
 			// echo 'All Complaints Test';
 			$this->load->view('template/header_customer');
-			$this->load->view('all_complaints');
+			$this->load->view('customer/all_complaints');
 			$this->load->view('template/footer_customer');
 		}
 
 		public function rate_review() {
 			// echo 'Customer Rate and Review Test';
 			$this->load->view('template/header_customer');
-			$this->load->view('rate_review');
+			$this->load->view('customer/rate_review');
 			$this->load->view('template/footer_customer');
 		}
 
@@ -98,6 +98,11 @@
 			$this->form_validation->set_rules('review', 'Review', 'required|xss_clean');
 			$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
 			$this->rate_and_reviews_model->insert_new_rate_and_review($clean['booking_id'], $clean['rating'], $clean['review']);
+		}
+
+		public function all_rate_reviews() {
+			$this->load->view('template/header_customer');
+			$this->load->view('template/footer_customer');
 		}
 	}
 ?>

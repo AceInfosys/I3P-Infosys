@@ -45,5 +45,5 @@
             </div>
         </div>
         <script type="text/javascript">
-            document.getElementById('li_all_bookings').classList.add("active");
+            document.getElementById('li_booking').classList.add("active");
         </script>

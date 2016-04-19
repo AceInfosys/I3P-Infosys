@@ -20,8 +20,8 @@
                     <a class="navbar-brand" href="index.html"><img class="logonav" src="<?php echo base_url(); ?>public/img/logozen.png"></a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <!-- <a class="textwhite" href="#">Booking</a> -->
+                    <!-- <li id="li_all_bookings">
+                        <a class="textwhite" href="#">Booking</a>
                         <?php
                             $attribute = array(
                                     'class' => 'textwhite'
@@ -29,35 +29,89 @@
                             echo anchor('customer/all_bookings', 'Semua Booking', $attribute);
                         ?>
                     </li>
-                    <li class="active">
-                        <!-- <a class="textwhite" href="booking.html">Booking</a> -->
+                    <li id="li_booking">
+                        <a class="textwhite" href="#">Booking</a>
                         <?php
                             $attribute = array(
                                     'class' => 'textwhite'
                                 );
                             echo anchor('customer/booking', 'Booking', $attribute);
                         ?>
+                    </li> -->
+
+                    <li id="li_booking" class="dropdown">
+                        <a class="dropdown-toggle textwhite" data-toggle="dropdown" href="#">Pemesanan <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <?php
+                                    echo anchor('customer/all_bookings', 'Pemesanan Saya');
+                                ?>
+                            </li>
+                            <li>
+                                <?php
+                                    echo anchor('customer/booking', 'Buat Pemesanan Baru');
+                                ?>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <!-- <a class="textwhite" href="reviewuser.html">Review</a> -->
+
+                    <!-- <li id="li_rate_review">
+                        <a class="textwhite" href="reviewuser.html">Review</a>
                         <?php
                             echo anchor('customer/rate_review', 'Rate and Review', array('class' => 'textwhite'));
                         ?>
+                    </li> -->
+
+                    <li id="li_rate_review" class="dropdown">
+                        <a class="dropdown-toggle textwhite" data-toggle="dropdown" href="#">Ulasan dan Tanggapan <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <?php
+                                    echo anchor('customer/all_rate_reviews', 'Ulasan dan Tanggapan Saya');
+                                ?>
+                            </li>
+                            <li>
+                                <?php
+                                    echo anchor('customer/rate_review', 'Buat Ulasan dan Tanggapan Baru');
+                                ?>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <!-- <a class="textwhite" href="komplainuser.html">Komplain</a> -->
+
+                    <!-- <li id="li_complaint">
+                        <a class="textwhite" href="komplainuser.html">Komplain</a>
                         <?php
                             $attribute = array(
                                     'class' => 'textwhite'
                                 );
                             echo anchor('customer/complaint', 'Keluhan', $attribute);
                         ?>
+                    </li> -->
+
+                    <li id="li_complaint" class="dropdown">
+                        <a class="dropdown-toggle textwhite" data-toggle="dropdown" href="#">Keluhan <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <?php
+                                    echo anchor('customer/all_complaints', 'Keluhan Saya');
+                                ?>
+                            </li>
+                            <li>
+                                <?php
+                                    echo anchor('customer/complaint', 'Buat Keluhan Baru');
+                                ?>
+                            </li>
+                        </ul>
                     </li>
+
                     <li class="dropdown"><a class="dropdown-toggle textwhite" data-toggle="dropdown" href="#">Username <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="pemesanansaya.html">Pemesanan Saya</a></li>
-                            <li><a href="komplainsaya.html">Komplain Saya</a></li>
-                            <li><a href="#">Log Out</a></li>
+                            <li><a href="komplainsaya.html">Profil Saya</a></li>
+                            <li>
+                                <?php
+                                    echo anchor('user/logout', 'Keluar');
+                                ?>
+                            </li>
                         </ul>
                     </li>
                 </ul>
