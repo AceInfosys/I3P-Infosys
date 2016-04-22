@@ -200,12 +200,12 @@ a:hover{
     background-color: transparent;
     margin-right: 20px;
 }
-.konfpemesanan{
+.konfpemesanan, .konfkomplain{
     float: right;
     color: #8d6e63;
     text-align: center;
 }
-.konfirmno, .konfirmyes{
+.konfirmno, .konfirmwait, .konfirmyes{
     text-align: right;
     width: 38px;
     margin-right: 3px;
@@ -316,4 +316,36 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 .headbooking{
 	margin-top:10px;
+}
+
+.genre{
+    height: 130px;
+}
+
+.detailprofilsaya{
+
+}
+
+.namalengkap{
+    font-variant-caps: all-petite-caps;
+    font-size: 20pt;
+}   
+
+.username{
+    font-size: 12pt;
+    color: #8d6e63;
+    margin-bottom: 5px;
+}
+
+.email{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.emailimg{
+    width: 20px;
+    margin-right: 10px;
+}
+.teleponimg{
+    width: 20px;
+    margin-right: 10px;
 }
