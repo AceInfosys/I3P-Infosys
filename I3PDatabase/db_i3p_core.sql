@@ -126,12 +126,14 @@ CREATE TABLE `complaint_comms` (
 -- Table structure for table `rate_and_reviews`
 CREATE TABLE `rate_and_reviews` (
 	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-	`booking_id` INT(10) UNSIGNED NOT NULL,
+	# `booking_id` INT(10) UNSIGNED NOT NULL,
+	`user_id` INT(10) UNSIGNED NOT NULL,
 	`rating` INT(10),
 	`review` TEXT,
 	`created_at` TIMESTAMP DEFAULT 0 NOT NULL,
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	PRIMARY KEY (`id`),
-	FOREIGN KEY (`booking_id`) REFERENCES `bookings`(`id`),
-	UNIQUE (`booking_id`)
+	FOREIGN KEY (`user_id`) REFERENCES `users`(`id`)
+	# FOREIGN KEY (`booking_id`) REFERENCES `bookings`(`id`),
+	# UNIQUE (`booking_id`)
 );

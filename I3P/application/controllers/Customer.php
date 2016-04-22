@@ -9,6 +9,7 @@
 			$this->load->model('customer_users_model');
 			$this->load->model('bookings_model');
 			$this->load->model('complaints_model');
+			$this->load->model('rate_and_reviews_model');
 		}
 
 		public function index() {
@@ -123,11 +124,17 @@
 			// $this->complaints_model->insert_new_rate_and_review( ,$this->input->post('rating'),$this->input->post('review'));
 			$this->form_validation->set_rules('review', 'Review', 'required|xss_clean');
 			$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
-			$this->rate_and_reviews_model->insert_new_rate_and_review($clean['booking_id'], $clean['rating'], $clean['review']);
+			$this->rate_and_reviews_model->insert_new_rate_and_review($this->session->userdata('logged_in')['id'], $clean['rating'], $clean['review']);
+
+			echo '<script>alert("Rating dan Review berhasil disimpan."); window.location.href="'.base_url().'index.php/customer/all_rate_reviews";</script>';
 		}
 
 		public function all_rate_reviews() {
+			$rate_reviews_data = $this->rate_and_reviews_model->get_all_rate_and_reviews_by_user_id($this->session->userdata('logged_in')['id']);
+
+			$data = array('data' => $rate_reviews_data);
 			$this->load->view('template/header_customer');
+			$this->load->view('customer/all_rate_review', $data);
 			$this->load->view('template/footer_customer');
 		}
 	}

@@ -3,9 +3,10 @@
                 <div class="panel-body">
                     <div class="panelhead">Ulasan dan Tanggapan Saya</div> <!-- username harus diganti dengan user saat ini-->
                     <div class="descques">Bagaimana pendapat anda tentang pelayanan kami?</div>
-                    <form role="form">
+                    <!-- <form role="form"> -->
+                    <?php echo form_open('customer/new_rate_review'); ?>
                         <div class="form-group">
-                            <textarea type="text" class="form-control descrvw" placeholder="Deskripsikan seluruh pendapat anda tentang pelayanan yang diberikan oleh therapist kami"></textarea>
+                            <textarea name="review" type="text" class="form-control descrvw" placeholder="Deskripsikan seluruh pendapat anda tentang pelayanan yang diberikan oleh therapist kami"></textarea>
                         </div>
                         <div class="form-group">
                             <span class="loverating">
@@ -25,7 +26,8 @@
                             <a href="booking.html" class="btn btnbatal" role="button"> BATAL</a>
                             <button type="submit" class="btn btnkirim"> KIRIM</button>
                         </div>
-                    </form>
+                    <!-- </form> -->
+                    <?php echo form_close(); ?>
                 </div>
             </div>
         </div>
