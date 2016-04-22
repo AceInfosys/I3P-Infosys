@@ -27,6 +27,10 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
+		if (isset($this->session->userdata('logged_in')['id'])){
+			// echo 'Logged in';
+			// TO DO: Make user difference.
+		}
 		$this->load->view('template/header', array('title' => 'I3P ZEN'));
 		$this->load->view('welcome');
 		$this->load->view('template/footer');

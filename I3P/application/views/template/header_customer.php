@@ -110,7 +110,12 @@
 
                     <li class="dropdown"><a class="dropdown-toggle textwhite" data-toggle="dropdown" href="#"><?php echo $this->session->userdata('logged_in')['username']; ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="komplainsaya.html">Profil Saya</a></li>
+                            <li>
+                                <!-- <a href="komplainsaya.html">Profil Saya</a> -->
+                                <?php
+                                    echo anchor('customer/profile', 'Profil Saya');
+                                ?>
+                            </li>
                             <li>
                                 <?php
                                     echo anchor('user/logout', 'Keluar');
