@@ -17,6 +17,7 @@
 					);
 				$this->session->set_userdata('logged_in', $session_data);
 
+				// TO DO: Make user differences
 				redirect('customer/profile');
 			}
 			else {
