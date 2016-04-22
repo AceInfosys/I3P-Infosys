@@ -22,11 +22,11 @@
                     <div class="rmbrbukti">Konfirmasi paling lambat<br>30 menit sebelum terapi dilakukan</div>
                     <div class="row">
                         <div class="col-sm-3">
-                            <button role="button" class="btn btnbukti">Cetak</button>
+                            <!-- <button role="button" class="btn btnbukti">Cetak</button> -->
                         </div>
-                        <div class="col-sm-6"></div>
-                        <div class="col-sm-3">
-                            <a href="pemesanansaya.html" role="button" class="btn btnbukti">Konfirmasi</a>
+                        <div class="col-sm-7"></div>
+                        <div class="col-sm-2">
+                            <a href="<?php echo base_url('index.php/customer/all_bookings'); ?>" role="button" class="btn btnbukti">OK</a>
                         </div>
                     </div>
                 </div>
