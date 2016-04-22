@@ -6,7 +6,7 @@
 		}
 
 		public function login_check($username, $password) {
-			$this->db->select('id, username, password');
+			$this->db->select('id, username, type, password');
 			$query = $this->db->get_where('users', array('username' => $username));
 			$query_result = $query->result();
 
@@ -14,6 +14,7 @@
 				if ($this->bcrypt->check_password($password, $query_result[0]->password)) {
 					$data = array(
 							'id' => $query_result[0]->id,
+							'type' => $query_result[0]->type,
 							'status' => 'OK'
 						);
 				}

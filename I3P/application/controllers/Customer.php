@@ -2,7 +2,7 @@
 	class Customer extends CI_Controller {
 		public function __construct() {
 			parent::__construct();
-			if ($this->session->userdata('logged_in')['id'] == '') {
+			if ($this->session->userdata('logged_in_customer')['id'] == '') {
 				redirect('welcome');
 			}
 			$this->load->model('users_model');
@@ -19,7 +19,7 @@
 		public function profile() {
 			// echo 'Customer Profile Test';
 			// echo $this->session->userdata('logged_in')['id'];
-			$profile = $this->users_model->get_all_by_id($this->session->userdata('logged_in')['id']);
+			$profile = $this->users_model->get_all_by_id($this->session->userdata('logged_in_customer')['id']);
 			$data = array('profile' => $profile);
 
 			$this->load->view('template/header_customer');
@@ -31,7 +31,7 @@
 		public function all_bookings() {
 			// echo 'All Booking Test';
 
-			$bookings = $this->bookings_model->get_bookings_by_user_id($this->session->userdata('logged_in')['id']);
+			$bookings = $this->bookings_model->get_bookings_by_user_id($this->session->userdata('logged_in_customer')['id']);
 
 			$data = array("data" => $bookings);
 
@@ -48,7 +48,7 @@
 		}
 
 		public function booking_receipt() {
-			$user_info = $this->users_model->get_all_by_id($this->session->userdata('logged_in')['id']);
+			$user_info = $this->users_model->get_all_by_id($this->session->userdata('logged_in_customer')['id']);
 			// $this->session->set_flashdata('booking_details', $user_info['full_name']);
 			// $this->session->keep_flashdata('booking_datetime');
 			$data = array(
@@ -66,7 +66,7 @@
 			$this->form_validation->set_rules('booking_service', 'Jenis Layanan', 'required|xss_clean');
 
 			$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
-			$this->bookings_model->insert_new_booking($this->session->userdata('logged_in')['id'], $clean['booking_datetime'], $clean['booking_service']);
+			$this->bookings_model->insert_new_booking($this->session->userdata('logged_in_customer')['id'], $clean['booking_datetime'], $clean['booking_service']);
 			
 			$this->session->set_flashdata('booking_datetime', $clean['booking_datetime']);
 			$this->session->set_flashdata('booking_service', $clean['booking_service']);
@@ -97,14 +97,14 @@
 		public function new_complaint() {
 			$this->form_validation->set_rules('message', 'Message', 'required|xss_clean');
 			$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
-			$this->complaints_model->insert_new_complaint($this->session->userdata('logged_in')['id'], $clean['message']);
+			$this->complaints_model->insert_new_complaint($this->session->userdata('logged_in_customer')['id'], $clean['message']);
 			// redirect('customer/booking');
 			echo '<script>alert("Keluhan berhasil disimpan."); window.location.href="'.base_url().'index.php/customer/all_complaints";</script>';
 		}
 
 		public function all_complaints() {
 			// echo 'All Complaints Test';
-			$complaints = $this->complaints_model->get_complaints_by_user_id($this->session->userdata('logged_in')['id']);
+			$complaints = $this->complaints_model->get_complaints_by_user_id($this->session->userdata('logged_in_customer')['id']);
 			$data = array('data' => $complaints);
 
 			$this->load->view('template/header_customer');
@@ -124,13 +124,13 @@
 			// $this->complaints_model->insert_new_rate_and_review( ,$this->input->post('rating'),$this->input->post('review'));
 			$this->form_validation->set_rules('review', 'Review', 'required|xss_clean');
 			$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
-			$this->rate_and_reviews_model->insert_new_rate_and_review($this->session->userdata('logged_in')['id'], isset($clean['rating']) ? $clean['rating'] : 0, $clean['review']);
+			$this->rate_and_reviews_model->insert_new_rate_and_review($this->session->userdata('logged_in_customer')['id'], isset($clean['rating']) ? $clean['rating'] : 0, $clean['review']);
 
 			echo '<script>alert("Rating dan Review berhasil disimpan."); window.location.href="'.base_url().'index.php/customer/all_rate_reviews";</script>';
 		}
 
 		public function all_rate_reviews() {
-			$rate_reviews_data = $this->rate_and_reviews_model->get_all_rate_and_reviews_by_user_id($this->session->userdata('logged_in')['id']);
+			$rate_reviews_data = $this->rate_and_reviews_model->get_all_rate_and_reviews_by_user_id($this->session->userdata('logged_in_customer')['id']);
 
 			$data = array('data' => $rate_reviews_data);
 			$this->load->view('template/header_customer');

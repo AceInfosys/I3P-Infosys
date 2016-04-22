@@ -13,12 +13,21 @@
 			if ($result['status'] == 'OK') {
 				$session_data = array(
 						'id' => $result['id'],
+						'type' => $result['type'],
 						'username' => $clean['username']
 					);
-				$this->session->set_userdata('logged_in', $session_data);
+
+				if ($result['type'] == 3) {
+					$this->session->set_userdata('logged_in_staff', $session_data);
+					redirect('staff/profile');
+				}
+				else {
+					$this->session->set_userdata('logged_in_customer', $session_data);
+					redirect('customer/profile');
+				}
 
 				// TO DO: Make user differences
-				redirect('customer/profile');
+				
 			}
 			else {
 				$this->load->view('template/header', array('title' => 'I3P ZEN'));

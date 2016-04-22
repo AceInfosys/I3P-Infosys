@@ -1,5 +1,12 @@
 <?php
 	class Staff extends CI_Controller {
+		public function __construct() {
+			parent::__construct();
+			if ($this->session->userdata('logged_in_staff') == '') {
+				redirect('welcome');
+			}
+		}
+
 		public function index() {
 			echo 'Staff Index Test';
 		}
