@@ -124,7 +124,7 @@
 			// $this->complaints_model->insert_new_rate_and_review( ,$this->input->post('rating'),$this->input->post('review'));
 			$this->form_validation->set_rules('review', 'Review', 'required|xss_clean');
 			$clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
-			$this->rate_and_reviews_model->insert_new_rate_and_review($this->session->userdata('logged_in')['id'], $clean['rating'], $clean['review']);
+			$this->rate_and_reviews_model->insert_new_rate_and_review($this->session->userdata('logged_in')['id'], isset($clean['rating']) ? $clean['rating'] : 0, $clean['review']);
 
 			echo '<script>alert("Rating dan Review berhasil disimpan."); window.location.href="'.base_url().'index.php/customer/all_rate_reviews";</script>';
 		}

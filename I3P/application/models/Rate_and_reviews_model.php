@@ -20,7 +20,8 @@
 			$insert_data = array(
 					'user_id' => $user_id,
 					'rating' => $rating,
-					'review' => $review
+					'review' => $review,
+					'created_at' => date('Y-m-d H:i:s')
 				);
 			$this->db->insert('rate_and_reviews', $insert_data);
 		}

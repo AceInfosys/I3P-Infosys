@@ -12,7 +12,7 @@
                     </div> <!-- ini harusnya isi review user-->
                     <div class="row detailreview">
                         <div class="col-sm-7">
-                            <div class="datereview">Dibuat pada 31 Maret 2016 07:29 PM</div><!-- ini harusnya tanggal dilakukannya review-->
+                            <div class="datereview"><?php echo $rate_review->created_at; ?></div><!-- ini harusnya tanggal dilakukannya review-->
                         </div>
                         <div class="col-sm-5">
                             <!-- di sini harusnya ngegenerate jumlah love yang ada dari user-->
